@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+</head>
+
+<body>
+
+    <script>
+        // Exercicio 4
+        // Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+
+        function experiencia(anos) {
+            var x = 0;
+            if (anos == 0 || anos <= 1)
+                x = 'Iniciante';
+            else if (anos == 1 || anos <= 3)
+                x = 'Intermediário';
+            else if (anos == 3 || anos <= 6)
+                x = 'Avançado';
+            else if (anos >= 7)
+                x = 'Jedi Master';
+
+            else
+                x = 'Anos de experiência não cadastrado.';
+
+            return x;
+        }
+        var anosEstudo = 7;
+        var resultado = experiencia(anosEstudo);
+        console.log(resultado);
+
+    </script>
+</body>
+
+</html>

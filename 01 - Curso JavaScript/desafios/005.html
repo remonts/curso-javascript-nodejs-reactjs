@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+</head>
+<body>
+    
+    <script>
+        /* Exercicio 5
+        Dado o seguinte vetor de objetos:
+        Escreva uma função que produza o seguinte resultado:
+
+        O Diego possui as habilidades: Javascript, ReactJS, Redux
+        O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir */
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        for (var i = 0; i < 2; i++)
+            console.log('O ' + usuarios[i].nome + ' possui as habilidades: ' + usuarios[i].habilidades.join(', '));
+    </script>
+</body>
+</html>
