@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+
+    <!--
+    Desafio 03
+    A partir do seguinte vetor:
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    Preencha uma lista ( <ul> ) no HTML com os itens da seguinte forma:
+    ● Diego
+    ● Gabriel
+    ● Lucas
+    -->
+
+</head>
+
+<body>
+    <ul id="list"></ul>
+    <button onclick="printVector()">Gerar lista </button>
+
+    <script>
+        function printVector() {
+            let names = ["Diego", "Gabriel", "Lucas"];
+            var list = document.querySelector('ul');
+            for (var i = 0; i < names.length; i++) {
+                let item = document.createElement('li');
+                item.appendChild(document.createTextNode(names[i]));
+                list.appendChild(item);
+            }
+        }
+    </script>
+</body>
+
+</html>
