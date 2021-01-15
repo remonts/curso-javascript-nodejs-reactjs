@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+
+    <!--
+    Desafio 01
+    Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela.
+    -->
+    
+</head>
+
+<body>
+    <div id="app">
+        <button class="botao">Criar quadrado vermelho</button>
+    </div>
+
+    <script>
+        var btnElement = document.querySelector('button.botao');
+        
+        btnElement.onclick = function() {
+            // cria um novo elemento div
+            var divNova = document.createElement("div");
+            divNova.style.width = '100px';
+            divNova.style.height = '100px';
+            divNova.style.backgroundColor = '#f00';     
+
+            // adiciona o novo elemento criado e seu conteúdo ao DOM
+            var divAtual = document.querySelector('app');
+            document.body.insertBefore(divNova, divAtual);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+
+    <!--
+    Desafio 02
+    Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+
+function getRandomColor() {
+var letters = "0123456789ABCDEF";
+var color = "#";
+for (var i = 0; i < 6; i++) {
+color += letters[Math.floor(Math.random() * 16)];
+}
+return color;
+}
+var newColor = getRandomColor(); // #E943F0
+    -->
+
+</head>
+
+<body>
+    <div id="app">
+        <button class="botao">Criar quadrado vermelho</button>
+    </div>
+
+    <script>
+        var btnElement = document.querySelector('button.botao');
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+
+        btnElement.onclick = function () {
+            // cria um novo elemento div
+            var divNova = document.createElement("div");
+            divNova.style.width = '100px';
+            divNova.style.height = '100px';
+            divNova.style.backgroundColor = '#f00';
+
+            // adiciona o novo elemento criado e seu conteúdo ao DOM
+            var divAtual = document.querySelector('app');
+            document.body.insertBefore(divNova, divAtual);
+
+            return divNova;
+        }
+
+        divNova.onmouseover = function () {
+
+            var divNovaCor = document.createElement("div");
+            divNovaCor.style.width = '100px';
+            divNovaCor.style.height = '100px';
+            divNovaCor.style.backgroundColor = newColor;
+
+            var divNova = document.querySelector('app');
+            document.body.insertBefore(divNovaCor, divNova);
+        }                      
+    </script>
+</body>
+
+</html>
