@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+    <!--
+    Desafio 04
+    Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+    
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+    Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+    -->
+
+</head>
+<body>
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+    <ul id="list" type="square"></ul>
+
+    <script>
+        function adicionar() {
+            // Pegando a referencia do elemento lista
+            var list = document.querySelector('ul');
+            // Pegando a referencia do elemento da lista
+            let item = document.createElement('li');
+            // Pegando a referencia do elemento input
+            var inputElement = document.querySelector('input');
+            // Salvando o texto do input na variavel text
+            var text = inputElement.value;
+            // Criando elemento de texto
+            var textElement = document.createTextNode(text);
+            
+            // Adicionando texto ao elemento item
+            item.appendChild(textElement);
+            // Adicionando o item na lista
+            list.appendChild(item);
+
+            // Apagar campo input, após clicar no botão adicionar
+            addEventListener('click', inputElement.value = '');
+        }
+    </script>
+</body>
+</html>
